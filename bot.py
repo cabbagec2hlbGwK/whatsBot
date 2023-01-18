@@ -109,8 +109,10 @@ class wBot:
 
 
 bot = wBot()
-name = "name"
+name = "Deji"
 bot.addContact(name)
 print(bot.getCotacts())
-bot.sendMessage(name, "Message is test")
+for a in range(100):
+    time.sleep(1)
+    bot.sendMessage(name, "Message is test")
 input(breakpoint)
