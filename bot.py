@@ -40,12 +40,9 @@ class wBot:
             div_object = None
             while True:
                 count = count + 1
-                print(count)
                 try:
                     result = self.driver.find_element(
                         By.XPATH, f'//*[@id="pane-side"]/div[1]/div/div/div[{count}]/div/div/div/div[2]/div[1]/div[1]/span')
-                    print(result.text)
-                    print(result.text in name)
                     if name in result.text:
                         div_object = self.driver.find_element(
                             By.XPATH, f'//*[@id="pane-side"]/div[1]/div/div/div[{count}]')
@@ -80,16 +77,12 @@ class wBot:
                     print("This user is not in the list, Pleace add them before using")
                 else:
                     chat = self.getChat(name)
-                    print(chat)
-                    print("sdffffffffffffffffffffffff")
                     if chat == 1:
-                        print("Some thing went wrong, the user was not found")
+                        print("Some thing went wrong, the user was not found sendMessage()")
                         return 1
                     chat.send_keys(message)
                     sendButton = self.driver.find_element(
                         By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
-                    # sendButton = self.driver.find_Element(
-                    # By.XPATH, "//button[@aria-label='Send']")
                     sendButton.click()
             except Exception as e:
                 print(e)
