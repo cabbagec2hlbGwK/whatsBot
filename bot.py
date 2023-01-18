@@ -105,5 +105,5 @@ bot = wBot()
 name = "name"
 bot.addContact(name)
 print(bot.getCotacts())
-bot.sendMessage(name, "Fuck u bitch")
+bot.sendMessage(name, "the message")
 input(breakpoint)
