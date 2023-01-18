@@ -109,7 +109,7 @@ class wBot:
 
 
 bot = wBot()
-name = "Ashwin Roommate"
+name = "name"
 bot.addContact(name)
 print(bot.getCotacts())
 bot.sendMessage(name, "Fuck u bitch")
